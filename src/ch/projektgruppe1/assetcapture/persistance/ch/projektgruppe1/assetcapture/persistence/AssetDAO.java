@@ -1,6 +1,6 @@
 package ch.projektgruppe1.assetcapture.persistence;
 
-public class AssetDAO {
+public interface AssetDAO {
 	
 	/**
 	 * Inserts data of an asset as Array

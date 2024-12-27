@@ -1,5 +1,8 @@
 package ch.projektgruppe1.assetcapture.business;
 
+import ch.projektgruppe1.assetcapture.persistence.AssetDAO;
+import ch.projektgruppe1.assetcapture.persistence.AssetDAOFactory;
+
 public class AssetFactory {
 
 	/**
@@ -38,10 +41,29 @@ public class AssetFactory {
 	 * @param assetSN
 	 * @return Asset
 	 */	
-	public createAsset(assetCategory String, assetTitle String, assetSN String){
-		Asset device = new BCDevice(assetCategory, assetTitle, assetSN);	// Concrete Device should be configured.
-		this.assetDAO.insertAssetAsArray(assetToArray(asset));
-		System.out.println("test")
-	}	
+	public Asset createAsset(String assetCategory,String assetTitle,String assetSN ){
+		return new BCDevice(assetCategory, assetTitle, assetSN);	// Concrete Device should be configured.
+			}	
 	
+	/**
+	 * Saves a device object
+	 * @param device
+	 */
+	public void saveAsset(Asset asset){		
+		this.assetDAO.insertAssetAsArray(assetToArray(asset));
+		System.out.println("saving Asset");
+	}
+	
+	/**
+	 * Converts Asset to Array.
+	 * @param asset to convert
+	 * @return Array containing data of given Asset
+	 */
+	private String[] assetToArray(Asset asset){		
+		String[] assetData = new String[2];
+		
+		assetData[1] = asset.getTitle();
+		
+		return assetData;
+	}
 }
