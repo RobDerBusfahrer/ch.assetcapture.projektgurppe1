@@ -1,4 +1,4 @@
-package ch.projektgruppe1.assetcapture.persistence;
+package ch.projektgruppe1.assetcapture.business;
 
 public class AssetFactory {
 

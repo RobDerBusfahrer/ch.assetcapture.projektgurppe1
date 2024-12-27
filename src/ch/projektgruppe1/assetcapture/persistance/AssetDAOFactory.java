@@ -1,4 +1,4 @@
-package ch.projektgruppe1.assetcapture.presentation;
+package ch.projektgruppe1.assetcapture.persistence;
 
 public class AssetDAOFactory {
 

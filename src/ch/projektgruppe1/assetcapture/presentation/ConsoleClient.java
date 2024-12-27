@@ -1,4 +1,4 @@
-package ch.projektgruppe1.assetcapture.business;
+package ch.projektgruppe1.assetcapture.presentation;
 
 
 public class ConsoleClient {
