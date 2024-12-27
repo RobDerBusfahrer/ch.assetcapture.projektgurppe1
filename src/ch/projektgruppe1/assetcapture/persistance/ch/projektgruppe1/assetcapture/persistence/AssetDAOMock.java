@@ -15,6 +15,12 @@ public class AssetDAOMock implements AssetDAO {
 			insertCount++;
 }
 	}
+	public String[] selectAssetAsArray(int assetId) {
+		if(assetId < insertCount){
+			return assetList[assetId];	
+		}	
+		return null;
+}
 }
 
 	

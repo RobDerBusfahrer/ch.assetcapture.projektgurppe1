@@ -16,6 +16,7 @@ public class AssetFactory {
 	private AssetDAO assetDAO = null;
 	
 	
+	
 	/**
 	 * Default constructor
 	 */
@@ -49,21 +50,51 @@ public class AssetFactory {
 	 * Saves a device object
 	 * @param device
 	 */
-	public void saveAsset(Asset asset){		
-		this.assetDAO.insertAssetAsArray(assetToArray(asset));
+	public void saveAsset(Asset asset, int savedAssets){		
+		this.assetDAO.insertAssetAsArray(assetToArray(asset, savedAssets));
 		System.out.println("saving Asset");
 	}
+	
+	public Asset findAsset(int i){
+				
+			String[] assetData = this.assetDAO.selectAssetAsArray(i);
+			if(assetData == null){
+				return null;
+			}
+			return arrayToAsset(assetData, i);
+			}
+			
+				
+			
+		
+
+			
+		
+		
 	
 	/**
 	 * Converts Asset to Array.
 	 * @param asset to convert
 	 * @return Array containing data of given Asset
 	 */
-	private String[] assetToArray(Asset asset){		
-		String[] assetData = new String[2];
+	private String[] assetToArray(Asset asset, int savedAssets){		
+		String[] assetData = new String[savedAssets+1];
 		
-		assetData[1] = asset.getTitle();
+		assetData[savedAssets] = asset.getTitle();
 		
 		return assetData;
 	}
+	
+	/**
+	 * Converts Array to Asset.
+	 * @param assetData
+	 * @return Array containing data of given Asset
+	 */
+	private Asset arrayToAsset(String[] assetData, int i){		
+		Asset asset = createAsset("N/A", assetData[i], "N/A");		
+		
+		return asset;
+	}
 }
+
+
