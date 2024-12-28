@@ -1,3 +1,7 @@
+/**
+ * Class for the ConsoleClient. Also contains the 
+ */
+
 package ch.projektgruppe1.assetcapture.presentation;
 
 import ch.projektgruppe1.assetcapture.business.Asset;
@@ -31,33 +35,33 @@ public class ConsoleClient {
 		//save asset
 		theAssetFactory.saveAsset(asset, savedAssets);
 		savedAssets++;
-		System.out.println(savedAssets);
 	}
 	
 	/**
-	 * Displays the inventory.
-	 * @param bookID the ID of the book to display.
+	 * Displays the full inventory.
 	 */
 	public void outputInventory(){
 		// Get book with given ID
 		for (int i = 0; i < savedAssets; i++) {
-			Asset asset = theAssetFactory.findAsset(i);
+			Asset asset = theAssetFactory.findAllAssets(i);
 		
 			// Display Asset
 			System.out.println(asset.getTitle());
 		}
 	}
 	
+	
+	/**
+	 * The Main Method.
+	 */
 	public static void main(String[] args) {		
 		ConsoleClient theClient = new ConsoleClient();
-		System.out.println("new consoleclient");
 		
 		theClient.inputAsset("Computer", "MacMini", "23525");
 		theClient.inputAsset("Laptop", "Lenovo", "GB37");
 		theClient.inputAsset("Laptop", "Dell", "3622");
 		theClient.inputAsset("Laptop", "test", "3622");
 		
-		theClient.outputInventory();
 		theClient.outputInventory();
 		
 	}

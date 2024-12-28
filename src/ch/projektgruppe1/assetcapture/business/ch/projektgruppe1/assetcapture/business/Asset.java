@@ -1,3 +1,8 @@
+/**
+ * Interface for Assets
+ * Only for Devices in the first Iteration!
+ */
+
 package ch.projektgruppe1.assetcapture.business;
 
 public interface Asset {
@@ -51,7 +56,7 @@ public interface Asset {
 			public String getAssetDescription();
 			
 			/**
-			 * @reuturn the statusID
+			 * @return the statusID
 			 */
 			public int getStatusID();
 			
