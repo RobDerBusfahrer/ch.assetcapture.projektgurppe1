@@ -4,10 +4,6 @@ abstract class AbstractAsset implements Asset {
 	
 	// Attributes
 	
-	
-	
-	
-
 		/**
 		 * The title.
 		 */
