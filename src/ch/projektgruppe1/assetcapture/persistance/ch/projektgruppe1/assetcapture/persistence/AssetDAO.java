@@ -1,3 +1,7 @@
+/**
+ * Interface of DAOs for data related to Assets
+ */
+
 package ch.projektgruppe1.assetcapture.persistence;
 
 public interface AssetDAO {

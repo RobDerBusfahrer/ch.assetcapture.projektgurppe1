@@ -1,3 +1,8 @@
+/**
+ * Parent class for Assets
+ * Only for Devices in the first Iteration!
+ */
+
 package ch.projektgruppe1.assetcapture.business;
 
 abstract class AbstractAsset implements Asset {
@@ -36,7 +41,7 @@ abstract class AbstractAsset implements Asset {
 		
 		//Constructor for BCDevice
 		/**
-		 * @param title
+		 * @param assetTitle
 		 * @param assetSN
 		 * @param assetCategory
 		 */
@@ -51,9 +56,9 @@ abstract class AbstractAsset implements Asset {
 		/**
 		 * @param title
 		 * @param assetSN
-		 * @param assetDescirption
+		 * @param assetDescription
 		 * @param statusID
-		 * @param statusDescirption
+		 * @param statusDescription
 		 * @param assetCategory
 		 */
 		public AbstractAsset(String title, String assetSN, String assetDescription, int statusID, String statusDescription, String assetCategory) {
@@ -125,27 +130,27 @@ abstract class AbstractAsset implements Asset {
 		}
 
 		/**
-		 * @param AssetDescirption the AssetDescirption to set
+		 * @param assetDescription the AssetDescirption to set
 		 */
 		public void setAssetDescription(String assetDescription) {
 			this.assetDescription = assetDescription;
 		}	
 		/**
-		 * @param setStatusID the setStatusID to set
+		 * @param statusID the setStatusID to set
 		 */																																
 		public void setStatusID(int statusID) {
 			this.statusID = statusID;
 		}
 
 		/**
-		 * @param StatusDescription the StatusDescription to set
+		 * @param statusDescription the StatusDescription to set
 		 */
 		public void setStatusDescription(String statusDescription) {
 			this.statusDescription = statusDescription;      
 		}	    
 		
 		/**
-		 * @param setAssetCategory the setAssetCategory to set
+		 * @param assetCategory the setAssetCategory to set
 		 */
 		public void setAssetCategory(String assetCategory) {
 			this.assetCategory = assetCategory;

@@ -1,9 +1,17 @@
+/**
+ * Class implementing a mock Database for the assets using an Array
+ */
+
+
 package ch.projektgruppe1.assetcapture.persistence;
 
 public class AssetDAOMock implements AssetDAO {
 	private String[][] assetList = null;
 	private int insertCount = 0;
 
+	/**
+	 * Default constructor 
+	 */
 	AssetDAOMock() {		
 	assetList = new String[10][];
 	insertCount = 0;
