@@ -14,7 +14,7 @@ public class AssetFactory {
 	 */
 	private static AssetFactory theInstance = null;
 	
-	/**
+	/** 
 	 * The Asset-DAO instance 
 	 */
 	private AssetDAO assetDAO = null;

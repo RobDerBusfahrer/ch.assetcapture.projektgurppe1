@@ -41,7 +41,7 @@ public class ConsoleClient {
 	 * Displays the full inventory.
 	 */
 	public void outputInventory(){
-		// Get book with given ID
+		// Get Asset with given ID
 		for (int i = 0; i < savedAssets; i++) {
 			Asset asset = theAssetFactory.findAllAssets(i);
 		
