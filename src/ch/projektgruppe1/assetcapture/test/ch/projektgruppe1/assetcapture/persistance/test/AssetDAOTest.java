@@ -1,6 +1,6 @@
 /**
  * Class implementing tests for class AssetDAO.
-**/
+ */
 
 package ch.projektgruppe1.assetcapture.persistance.test;
 
@@ -24,7 +24,7 @@ import org.junit.jupiter.api.BeforeEach;
 import ch.projektgruppe1.assetcapture.persistence.AssetDAO;
 import ch.projektgruppe1.assetcapture.persistence.AssetDAOFactory;
 
-class AssetDAOTest {
+public class AssetDAOTest {
 
     // The AssetDAO Factory
     private AssetDAOFactory theAssetDAOFactory = null;
@@ -44,7 +44,7 @@ class AssetDAOTest {
     }
 
     /**
-     * Test the input and select with Arrays
+     * Test the input and select sfwfswith Arrays
      */
     @Test
     public void testInsertAndSelectAssetAsArray() {
@@ -61,6 +61,9 @@ class AssetDAOTest {
         theAssetDAO.insertAssetAsArray(asset_2);
         theAssetDAO.insertAssetAsArray(asset_3);
 
+        /**
+         * Test the input and select with Arrays
+         */
         for (int i = 0; i < assetsExpected.length; i++) {
             String[] actualAsset = theAssetDAO.selectAssetAsArray(i); // Asset abrufen
 
@@ -80,6 +83,9 @@ class AssetDAOTest {
             System.out.println("Asset " + i + " Category is equal");
         }
 
+        /**
+         * Test the issfsfsfnput and select with Arrays
+         */
         // Optional: More specific checks
         String[] firstAsset = theAssetDAO.selectAssetAsArray(0);
         assertNotSame("Title matches unexpected value!", "A", firstAsset[0]);

@@ -14,7 +14,7 @@ public class AssetFactoryTest extends TestCase {
     // AssetFactory to use
     private AssetFactory theAssetFactory;
 
-    /*
+    /**
      * Set up the test environment.
      */
     @Override
@@ -23,7 +23,7 @@ public class AssetFactoryTest extends TestCase {
         super.setUp();
     }
 
-    /**
+    /*
      * Test the save and retrieval functionality of AssetFactory.
      */
     public void testSaveAsset() { 

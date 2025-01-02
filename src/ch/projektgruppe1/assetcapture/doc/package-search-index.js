@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"Alle Packages","u":"allpackages-index.html"},{"l":"ch.projektgruppe1.assetcapture.business"},{"l":"ch.projektgruppe1.assetcapture.persistence"},{"l":"ch.projektgruppe1.assetcapture.presentation"}];updateSearchResults();
+packageSearchIndex = [{"l":"Alle Packages","u":"allpackages-index.html"},{"l":"ch.projektgruppe1.assetcapture.business.test"},{"l":"ch.projektgruppe1.assetcapture.persistance.test"},{"l":"ch.projektgruppe1.assetcapture.persistence"},{"l":"ch.projektgruppe1.assetcapture.presentation"}];updateSearchResults();

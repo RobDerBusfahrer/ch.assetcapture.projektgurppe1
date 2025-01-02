@@ -1,3 +1,5 @@
 ch.projektgruppe1.assetcapture.business
+ch.projektgruppe1.assetcapture.business.test
+ch.projektgruppe1.assetcapture.persistance.test
 ch.projektgruppe1.assetcapture.persistence
 ch.projektgruppe1.assetcapture.presentation
