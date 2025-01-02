@@ -28,7 +28,7 @@ public class AssetFactoryTest extends TestCase {
      */
     public void testSaveAsset() { 
     	
-        
+    	// Creates Expected Data
         Asset asset1 = theAssetFactory.createAsset(EXPECTED_AssetCategory1, EXPECTED_Title1, EXPECTED_AssetSN1);
         Asset asset2 = theAssetFactory.createAsset(EXPECTED_AssetCategory2, EXPECTED_Title2, EXPECTED_AssetSN2);
         Asset asset3 = theAssetFactory.createAsset(EXPECTED_AssetCategory3, EXPECTED_Title3, EXPECTED_AssetSN3);

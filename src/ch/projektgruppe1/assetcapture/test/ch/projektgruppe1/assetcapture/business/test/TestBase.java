@@ -1,3 +1,7 @@
+/**
+ * Class providing basic types, constants etc. for JUnit tests.
+ */
+
 package ch.projektgruppe1.assetcapture.business.test;
 
 public final class TestBase {
