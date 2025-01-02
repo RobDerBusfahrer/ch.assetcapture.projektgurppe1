@@ -1,7 +1,5 @@
 /**
- * Class implementing tests for class MediaFactory.
- * 
- * @author Projektgruppe1
+ * Class implementing tests for class AssetFactory.
  */
 
 package ch.projektgruppe1.assetcapture.business.test;
@@ -45,12 +43,11 @@ public class AssetFactoryTest extends TestCase {
 
         //Test
         for (int i = 0; i < expectedAssets.length; i++) {
-           //Asset actualAsset = theAssetFactory.findAllAssets(i);
            
             Asset actualAsset = expectedAssets[i];
             
             
-            // Überprüfen, dass das Asset nicht null ist
+            // Check that Asset is not null
             assertNotNull("Asset does not exist!", actualAsset);
 
             // Asset Title Check
@@ -66,7 +63,7 @@ public class AssetFactoryTest extends TestCase {
             System.out.println("asset " + i + " SN is equal");
         }
 
-        // Optional: Weitere spezifische Checks
+        // Optional: More specific checks
         Asset firstAsset = theAssetFactory.findAllAssets(0);
         assertNotSame("Title matches unexpected value!", "A", firstAsset.getTitle());
         assertNotSame("Serial number matches unexpected value!", "1", firstAsset.getAssetSN());
