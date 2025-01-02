@@ -18,5 +18,3 @@ public interface AssetDAO {
 	 */
 	public String[] selectAssetAsArray(int assetId);
 }
-
-

@@ -10,7 +10,7 @@ public class AssetDAOMock implements AssetDAO {
 	private int insertCount = 0;
 
 	/**
-	 * Default constructor 
+	 * Default constructor
 	 */
 	AssetDAOMock() {		
 	assetList = new String[10][];

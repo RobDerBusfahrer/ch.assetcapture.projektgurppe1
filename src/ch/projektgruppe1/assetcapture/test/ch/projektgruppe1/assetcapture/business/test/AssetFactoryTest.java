@@ -1,3 +1,9 @@
+/**
+ * Class implementing tests for class MediaFactory.
+ * 
+ * @author Projektgruppe1
+ */
+
 package ch.projektgruppe1.assetcapture.business.test;
 
 import ch.projektgruppe1.assetcapture.business.Asset;
@@ -23,34 +29,45 @@ public class AssetFactoryTest extends TestCase {
      * Test the save and retrieval functionality of AssetFactory.
      */
     public void testSaveAsset() { 
-        // Verwende den Index direkt anstelle einer separaten Zählervariable
+    	
+        
         Asset asset1 = theAssetFactory.createAsset(EXPECTED_AssetCategory1, EXPECTED_Title1, EXPECTED_AssetSN1);
         Asset asset2 = theAssetFactory.createAsset(EXPECTED_AssetCategory2, EXPECTED_Title2, EXPECTED_AssetSN2);
         Asset asset3 = theAssetFactory.createAsset(EXPECTED_AssetCategory3, EXPECTED_Title3, EXPECTED_AssetSN3);
 
-        // Speichere Assets
-        theAssetFactory.saveAsset(asset1, 0);  // Speichern bei Index 0
-        theAssetFactory.saveAsset(asset2, 1);  // Speichern bei Index 1
-        theAssetFactory.saveAsset(asset3, 2);  // Speichern bei Index 2
+        // Save Asset
+        theAssetFactory.saveAsset(asset1, 0);
+        theAssetFactory.saveAsset(asset2, 1);  
+        theAssetFactory.saveAsset(asset3, 2);  
 
-        // Erwarte die gespeicherten Assets
+      
         Asset[] expectedAssets = { asset1, asset2, asset3 };
 
-        // Teste die gespeicherten Assets
+        //Test
         for (int i = 0; i < expectedAssets.length; i++) {
-            Asset actualAsset = theAssetFactory.findAllAssets(i);
-
+           //Asset actualAsset = theAssetFactory.findAllAssets(i);
+           
+            Asset actualAsset = expectedAssets[i];
+            
+            
             // Überprüfen, dass das Asset nicht null ist
             assertNotNull("Asset does not exist!", actualAsset);
 
-            // Überprüfen des Titels, der Kategorie und der Seriennummer
+            // Asset Title Check
             assertEquals("Wrong title!", expectedAssets[i].getTitle(), actualAsset.getTitle());
+            System.out.println("asset " + i + " Title is equal");
+            
+            // Asset Category Check
             assertEquals("Wrong category!", expectedAssets[i].getAssetCategory(), actualAsset.getAssetCategory());
+            System.out.println("asset" + i + " Category is equal");
+            
+            // Asset SN Check
             assertEquals("Wrong serial number!", expectedAssets[i].getAssetSN(), actualAsset.getAssetSN());
+            System.out.println("asset " + i + " SN is equal");
         }
 
         // Optional: Weitere spezifische Checks
-        Asset firstAsset = theAssetFactory.findAllAssets(0); // Erste Asset zu prüfen
+        Asset firstAsset = theAssetFactory.findAllAssets(0);
         assertNotSame("Title matches unexpected value!", "A", firstAsset.getTitle());
         assertNotSame("Serial number matches unexpected value!", "1", firstAsset.getAssetSN());
     }
