@@ -12,7 +12,7 @@ abstract class AbstractAsset implements Asset {
 		/**
 		 * The title.
 		 */
-		private String title;
+		private String assetTitle;
 		
 		/**
 		 * The Asset serial number.
@@ -46,7 +46,7 @@ abstract class AbstractAsset implements Asset {
 		 * @param assetCategory
 		 */
 		public AbstractAsset(String assetCategory, String assetTitle, String assetSN) {
-			setTitle(assetTitle);
+			setAssetTitle(assetTitle);
 			setAssetSN(assetSN);
 			setAssetCategory(assetCategory);
 		}	
@@ -54,15 +54,15 @@ abstract class AbstractAsset implements Asset {
 		// Special constructor
 		
 		/**
-		 * @param title
+		 * @param assetTitle
 		 * @param assetSN
 		 * @param assetDescription
 		 * @param statusID
 		 * @param statusDescription
 		 * @param assetCategory
 		 */
-		public AbstractAsset(String title, String assetSN, String assetDescription, int statusID, String statusDescription, String assetCategory) {
-			setTitle(title);
+		public AbstractAsset(String assetTitle, String assetSN, String assetDescription, int statusID, String statusDescription, String assetCategory) {
+			setAssetTitle(assetTitle);
 			setAssetSN(assetSN);
 			setAssetDescription(assetDescription);
 			setStatusID(statusID);
@@ -75,8 +75,8 @@ abstract class AbstractAsset implements Asset {
 		/* (non-Javadoc)
 		 *
 		 */
-		public final String getTitle() {
-			return title;
+		public final String getAssetTitle() {
+			return assetTitle;
 		}
 
 		/* (non-Javadoc)
@@ -118,8 +118,8 @@ abstract class AbstractAsset implements Asset {
 		/**
 		 * @param title the title to set
 		 */
-		public void setTitle(String title) {
-			this.title = title;
+		public void setAssetTitle(String assetTitle) {
+			this.assetTitle = assetTitle;
 		}		
 		
 		/**

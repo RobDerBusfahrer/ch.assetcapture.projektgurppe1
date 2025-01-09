@@ -15,7 +15,7 @@ public class ConsoleClient {
 	/**
 	 * The Asset count
 	 */
-	private  int savedAssets = 0;
+	private  int savedAssetAmount = 0;
 	
 	// Constructors
 	public ConsoleClient() {
@@ -33,8 +33,8 @@ public class ConsoleClient {
 	public void inputAsset(String assetCategory ,String assetTitle,String assetSN) {
 		Asset asset = theAssetFactory.createAsset(assetCategory, assetTitle, assetSN);
 		//save asset
-		theAssetFactory.saveAsset(asset, savedAssets);
-		savedAssets++;
+		theAssetFactory.saveAsset(asset, savedAssetAmount);
+		savedAssetAmount++;
 	}
 	
 	/**
@@ -42,11 +42,11 @@ public class ConsoleClient {
 	 */
 	public void outputInventory(){
 		// Get Asset with given ID
-		for (int i = 0; i < savedAssets; i++) {
-			Asset asset = theAssetFactory.findAllAssets(i);
+		for (int i = 0; i < savedAssetAmount; i++) {
+			Asset asset = theAssetFactory.findAsset(i);
 		
 			// Display Asset
-			System.out.println(asset.getTitle());
+			System.out.println(asset.getAssetTitle());
 		}
 	}
 	

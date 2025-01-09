@@ -44,7 +44,7 @@ public class AssetDAOTest {
     }
 
     /**
-     * Test the input and select sfwfswith Arrays
+     * Test the input and select with Arrays
      */
     @Test
     public void testInsertAndSelectAssetAsArray() {
@@ -72,19 +72,19 @@ public class AssetDAOTest {
 
             // Asset Title Check
             assertEquals("Wrong title!", assetsExpected[i][0], actualAsset[0]);
-            System.out.println("Asset " + i + " Title is equal");
+            //System.out.println("Asset " + i + " Title is equal");
 
             // Asset SN Check
             assertEquals("Wrong serial number!", assetsExpected[i][1], actualAsset[1]);
-            System.out.println("Asset " + i + " Serial Number is equal");
+            //System.out.println("Asset " + i + " Serial Number is equal");
         
             // Asset Category Check
             assertEquals("Wrong Category!", assetsExpected[i][2], actualAsset[2]);
-            System.out.println("Asset " + i + " Category is equal");
+            //System.out.println("Asset " + i + " Category is equal");
         }
 
         /**
-         * Test the issfsfsfnput and select with Arrays
+         * Test the input and select with Arrays
          */
         // Optional: More specific checks
         String[] firstAsset = theAssetDAO.selectAssetAsArray(0);

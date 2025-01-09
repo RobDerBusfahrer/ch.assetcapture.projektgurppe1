@@ -65,7 +65,7 @@ public class AssetFactory {
 	 * @param currentAsset ID of current Asset in loop
 	 * @return Asset object or null
 	 */
-	public Asset findAllAssets(int currentAsset){
+	public Asset findAsset(int currentAsset){
 				
 			String[] assetData = this.assetDAO.selectAssetAsArray(currentAsset);
 			if(assetData == null){
@@ -82,7 +82,7 @@ public class AssetFactory {
 	private String[] assetToArray(Asset asset, int savedAssets){		
 		String[] assetData = new String[savedAssets+1];
 		
-		assetData[savedAssets] ="Title: "+ asset.getTitle()+"		|"+"		Category: " +asset.getAssetCategory()+"		|"+"		SN: "+ asset.getAssetSN();
+		assetData[savedAssets] ="Title: "+ asset.getAssetTitle()+"		|"+"		Category: " +asset.getAssetCategory()+"		|"+"		SN: "+ asset.getAssetSN();
 		
 		return assetData;
 	}

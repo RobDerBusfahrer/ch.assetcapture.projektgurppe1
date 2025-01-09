@@ -27,4 +27,5 @@ public class BCDevice extends AbstractAsset{
 		// TODO Auto-generated constructor stub
 	}
 
-}
+	}
+

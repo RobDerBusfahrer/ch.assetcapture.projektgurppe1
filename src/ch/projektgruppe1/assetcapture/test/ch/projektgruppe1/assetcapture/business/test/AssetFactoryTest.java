@@ -51,21 +51,21 @@ public class AssetFactoryTest extends TestCase {
             assertNotNull("Asset does not exist!", actualAsset);
 
             // Asset Title Check
-            assertEquals("Wrong title!", expectedAssets[i].getTitle(), actualAsset.getTitle());
-            System.out.println("asset " + i + " Title is equal");
+            assertEquals("Wrong title!", expectedAssets[i].getAssetTitle(), actualAsset.getAssetTitle());
+            //System.out.println("asset " + i + " Title is equal");
             
             // Asset Category Check
             assertEquals("Wrong category!", expectedAssets[i].getAssetCategory(), actualAsset.getAssetCategory());
-            System.out.println("asset" + i + " Category is equal");
+            //System.out.println("asset" + i + " Category is equal");
             
             // Asset SN Check
             assertEquals("Wrong serial number!", expectedAssets[i].getAssetSN(), actualAsset.getAssetSN());
-            System.out.println("asset " + i + " SN is equal");
+            //System.out.println("asset " + i + " SN is equal");
         }
 
         // Optional: More specific checks
-        Asset firstAsset = theAssetFactory.findAllAssets(0);
-        assertNotSame("Title matches unexpected value!", "A", firstAsset.getTitle());
+        Asset firstAsset = theAssetFactory.findAsset(0);
+        assertNotSame("Title matches unexpected value!", "A", firstAsset.getAssetTitle());
         assertNotSame("Serial number matches unexpected value!", "1", firstAsset.getAssetSN());
     }
 

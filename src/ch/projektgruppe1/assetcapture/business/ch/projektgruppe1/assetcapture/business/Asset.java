@@ -11,7 +11,7 @@ public interface Asset {
 			/**
 			 * set the title
 			 */
-			public void setTitle(String title);
+			public void setAssetTitle(String assetTitle);
 			
 			/**
 			 * set the serial number
@@ -43,7 +43,7 @@ public interface Asset {
 			/**
 			 * @return the title
 			 */
-			public String getTitle();
+			public String getAssetTitle();
 
 			/**
 			 * @return the serial number
